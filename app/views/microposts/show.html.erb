@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @micropost %>
+
+  <h1><%= @user.name %>さんのページ</h1>
+
+
+
+<div>
+<%= link_to @first_micropost.content, micropost_path(@first_micropost) %>
+  <%= link_to "Edit this micropost", edit_micropost_path(@micropost) %> |
+  <%= link_to "Back to microposts", microposts_path %>
+
+  <%= button_to "Destroy this micropost", @micropost, method: :delete %>
+</div>
